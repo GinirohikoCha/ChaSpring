@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.github.ginirohikocha'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation group: 'org.apache.velocity', name: 'velocity-engine-core', version: '2.2'
+    // mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    // mybatis-plus
+    implementation group: 'com.baomidou', name: 'mybatis-plus-boot-starter', version: '3.4.2'
+    implementation group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.4.1'
+    // fastjson
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.75'
+}
+
+test {
+    useJUnitPlatform()
+}
