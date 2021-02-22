@@ -1,6 +1,7 @@
 package com.github.ginirohikocha.spring.controller;
 
 import com.github.ginirohikocha.spring.service.ITestService;
+import com.github.ginirohikocha.spring.vo.Json;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,5 +29,13 @@ public class TestController {
     @GetMapping("/mysql")
     public String mysql() {
         return testService.getOne(null).getValue();
+    }
+
+    @GetMapping("/json")
+    public Json json() {
+        return Json.succ()
+                .msg("Hello Json!")
+                .data("Put data here!")
+                .put("additional", "Additional data here!");
     }
 }
