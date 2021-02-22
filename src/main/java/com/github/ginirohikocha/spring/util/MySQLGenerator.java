@@ -6,25 +6,23 @@ import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import org.springframework.stereotype.Component;
 
 /**
  * @author GinirohikoCha
  * @version 0.0.1
  * @date 2021/2/21 22:08
  */
-@Component
 public class MySQLGenerator {
 
     public static void main(String[] args) {
         GlobalConfig globalConfig = new GlobalConfig()
                 .setOutputDir(System.getProperty("user.dir") + "/src/main/java")
                 .setAuthor("GinirohikoCha")
-                .setFileOverride(false)
+                .setFileOverride(true)
                 .setOpen(false);
 
         DataSourceConfig dataSourceConfig = new DataSourceConfig()
-                .setUrl("jdbc:mysql://localhost:3306/spring?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false")
+                .setUrl("jdbc:mysql://localhost:3306/spring?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true")
                 .setDriverName("com.mysql.cj.jdbc.Driver")
                 .setUsername("root")
                 .setPassword("******");
@@ -37,6 +35,8 @@ public class MySQLGenerator {
                 .setNaming(NamingStrategy.underline_to_camel)
                 .setColumnNaming(NamingStrategy.underline_to_camel)
                 .setRestControllerStyle(true)
+                .setEntityLombokModel(true)
+                .setEntitySerialVersionUID(true)
                 .setInclude(new String[]{
                         // 需要导出的表名
                         // "table1",

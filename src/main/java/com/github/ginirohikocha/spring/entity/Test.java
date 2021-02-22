@@ -3,6 +3,8 @@ package com.github.ginirohikocha.spring.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * <p>
@@ -10,8 +12,10 @@ import java.io.Serializable;
  * </p>
  *
  * @author GinirohikoCha
- * @since 2021-02-21
+ * @since 2021-02-22
  */
+@Data
+@EqualsAndHashCode(callSuper = false)
 public class Test implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -22,27 +26,4 @@ public class Test implements Serializable {
     private String value;
 
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "Test{" +
-        "id=" + id +
-        ", value=" + value +
-        "}";
-    }
 }
