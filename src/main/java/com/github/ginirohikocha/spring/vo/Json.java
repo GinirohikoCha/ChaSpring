@@ -16,7 +16,7 @@ public class Json extends HashMap<String, Object> {
     public static final int DEFAULT_SUCC_CODE = 200;
     public static final int DEFAULT_FAIL_CODE = 500;
     public static final String DEFAULT_SUCC_MSG = "操作成功";
-    public static final String DEFAULT_FAIL_MSG = "操作失败";
+    public static final String DEFAULT_FAIL_MSG = "未知错误";
 
     public Json() {
         this.put(KEY_CODE, DEFAULT_SUCC_CODE);
