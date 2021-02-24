@@ -18,7 +18,7 @@ public class MySQLGenerator {
         GlobalConfig globalConfig = new GlobalConfig()
                 .setOutputDir(System.getProperty("user.dir") + "/src/main/java")
                 .setAuthor("GinirohikoCha")
-                .setFileOverride(true)
+                .setFileOverride(false)
                 .setOpen(false);
 
         DataSourceConfig dataSourceConfig = new DataSourceConfig()
@@ -37,12 +37,11 @@ public class MySQLGenerator {
                 .setRestControllerStyle(true)
                 .setEntityLombokModel(true)
                 .setEntitySerialVersionUID(true)
-                .setInclude(new String[]{
+                .setInclude(
                         // 需要导出的表名
-                        // "table1",
-                        // "table2",
-                        "test"
-                });
+                        "test",
+                        "user"
+                );
 
         AutoGenerator autoGenerator = new AutoGenerator()
                 .setGlobalConfig(globalConfig)
