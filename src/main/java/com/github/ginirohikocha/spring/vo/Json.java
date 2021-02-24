@@ -45,12 +45,20 @@ public class Json extends HashMap<String, Object> {
         return new Json();
     }
 
+    public static Json succ(String msg) {
+        return new Json().msg(msg);
+    }
+
     /**
      * 操作失败
      * @return Json
      */
     public static Json fail() {
         return new Json(DEFAULT_FAIL_CODE, DEFAULT_FAIL_MSG, null);
+    }
+
+    public static Json fail(String msg) {
+        return new Json(DEFAULT_FAIL_CODE, msg, null);
     }
 
     /*
