@@ -9,6 +9,10 @@ import java.util.UUID;
  */
 public class UUIDUtil {
 
+    public static void main(String[] args) {
+        System.out.println(generateRandomUUID());
+    }
+
     /**
      * @return String 无'-'号，32字符长度的随即UUID
      */
