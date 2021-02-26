@@ -10,6 +10,8 @@ mysql:
   password: *
 
 spring:
+  profiles:
+    include: mybatisplus
   datasource:
     # 需求依赖: mysql-connector-java
     # Driver class `com.mysql.jdbc.Driver' is deprecated.

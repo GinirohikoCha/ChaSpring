@@ -1,0 +1,7 @@
+mybatis-plus:
+  # mappers放在resource目录
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  configuration:
+    # 是否开启自动驼峰命名规则（camel case）映射，
+    # 即从经典数据库列名 A_COLUMN（下划线命名） 到经典 Java 属性名 aColumn（驼峰命名） 的类似映射。
+    map-underscore-to-camel-case: false
