@@ -1,0 +1,3 @@
+mybatis-plus:
+  # mappers放在resource目录
+  mapper-locations: classpath:/mapper/*Mapper.xml

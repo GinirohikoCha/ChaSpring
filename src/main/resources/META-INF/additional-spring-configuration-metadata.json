@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "mysql.port",
+      "type": "java.lang.String",
+      "description": "Description for mysql.port."
+    },
+    {
+      "name": "mysql.schema",
+      "type": "java.lang.String",
+      "description": "Description for mysql.schema."
+    },
+    {
+      "name": "mysql.username",
+      "type": "java.lang.String",
+      "description": "Description for mysql.username."
+    },
+    {
+      "name": "mysql.password",
+      "type": "java.lang.String",
+      "description": "Description for mysql.password."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+server:
+  port: 8088
+
+# MySQL
+mysql:
+  port: 3306
+  schema: spring
+  username: 用户名
+  password: 密码
+
+spring:
+  profiles:
+    include: mybatisplus
+  datasource:
+    # 需求依赖: mysql-connector-java
+    # Driver class `com.mysql.jdbc.Driver' is deprecated.
+    # The new driver class is `com.mysql.cj.jdbc.Driver'.
+    # The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:${mysql.port}/${mysql.schema}?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+    username: ${mysql.username}
+    password: ${mysql.password}
