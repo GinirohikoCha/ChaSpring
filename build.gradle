@@ -35,6 +35,11 @@ dependencies {
     // 依赖:Apache Velocity Engine
     // https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator
     implementation group: 'com.baomidou', name: 'mybatis-plus-generator', version: '3.4.1'
+    // Shiro
+    // https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring-boot-web-starter
+    implementation group: 'org.apache.shiro', name: 'shiro-spring-boot-web-starter', version: '1.7.1'
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.76'
 
 }
 
