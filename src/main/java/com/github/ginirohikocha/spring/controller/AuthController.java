@@ -89,10 +89,18 @@ public class AuthController {
         }
     }
 
-    @GetMapping("session")
-    public String session() {
+    @PostMapping("logout")
+    public Json logout() {
+        SecurityUtils.getSubject().logout();
+        return Json.succ();
+    }
+
+    @GetMapping("info")
+    public Json info() {
         SysUserAuth sysUserAuth = (SysUserAuth) SecurityUtils.getSubject().getPrincipal();
-        return sysUserAuth.toString();
+        SysUser sysUser = sysUserService.getById(sysUserAuth.getUserId());
+        return Json.succ()
+                .data(sysUser.toString());
     }
 
 }
